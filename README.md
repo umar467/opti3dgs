@@ -1,3 +1,17 @@
+# Opti3DGS: Optimized 3D Gaussian Splatting using Coarse-to-Fine Image Frequency Modulation
+[Webpage](https://umar467.github.io/projects/opti3dgs.html) | [Full Paper](https://dl.acm.org/doi/10.1145/3756863.3769707)
+
+This is a minimal plug-in example of Opti3DGS applied on the original 3DGS reference implementation. The code has been reverted to the last benchmarked commit for easy reproducibility, but the same plug-in code sample should work for later commits as well.
+
+The minimal plug-in patch can also be used with 
+* [MiniSplatting](https://github.com/fatPeter/mini-splatting)
+* [Taming3DGS](https://github.com/humansensinglab/taming-3dgs)
+
+and other methods reported in our paper.
+
+---
+---
+
 # 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 Bernhard Kerbl*, Georgios Kopanas*, Thomas Leimkühler, George Drettakis (* indicates equal contribution)<br>
 | [Webpage](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) | [Full Paper](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_high.pdf) | [Video](https://youtu.be/T_kXY43VZnk) | [Other GRAPHDECO Publications](http://www-sop.inria.fr/reves/publis/gdindex.php) | [FUNGRAPH project page](https://fungraph.inria.fr) |<br>
