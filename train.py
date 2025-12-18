@@ -86,6 +86,24 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
         render_pkg = render(viewpoint_cam, gaussians, pipe, bg)
         image, viewspace_point_tensor, visibility_filter, radii = render_pkg["render"], render_pkg["viewspace_points"], render_pkg["visibility_filter"], render_pkg["radii"]
 
+        # Opti3DGS Step Decay Function
+        if iteration < 12_000:
+            if iteration < 1000:
+                k = 15
+                p = 7
+            if iteration >= 1000:
+                k = 9
+                p = 4
+            if iteration >=4000:
+                k =5
+                p = 2
+            if iteration >=8000:
+                k = 3
+                p = 1
+            gt_image = torch.nn.functional.avg_pool2d(gt_image, kernel_size=k, stride=1, padding=p)
+        # Opti3DGS end of plug-in code module
+        # Refer to Figure 7 in the code for more options
+
         # Loss
         gt_image = viewpoint_cam.original_image.cuda()
         Ll1 = l1_loss(image, gt_image)
