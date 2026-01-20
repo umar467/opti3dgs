@@ -1,6 +1,8 @@
 # Opti3DGS: Optimized 3D Gaussian Splatting using Coarse-to-Fine Image Frequency Modulation
 [Webpage](https://umar467.github.io/projects/opti3dgs.html) | [Full Paper](https://dl.acm.org/doi/10.1145/3756863.3769707)
 
+Opti3DGS reduces the gaussian count during optimization via frequency modulation of the training images and leads to significant decrease in the GPU memory and storage footprint.
+
 This is a minimal plug-in example of Opti3DGS applied on the original 3DGS reference implementation. The code has been reverted to the last benchmarked commit for easy reproducibility, but the same plug-in code sample should work for later commits as well.
 
 The minimal plug-in patch can also be used with 
